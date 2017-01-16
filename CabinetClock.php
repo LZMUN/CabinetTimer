@@ -1,7 +1,6 @@
 <html>
 <head>
 
-
 <p>内阁时钟显示器</p>
 <p>！！会议过程中请不要关闭本窗口！！</p>
 <form name=tett>
@@ -32,18 +31,13 @@ t=setTimeout("timedCount()",1000) //每1秒计算1次 1000毫秒为1秒
 </head>
 
 <body>
-
 <form>
-<input type="button" value="开始计时！" onClick="timedCount()">
+<input type="button" value="开会啦！！" onClick="timedCount()">
 <input type="text" id="txt">
 </form>
-
 <p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p>
 <p>会议结束前，请重新记一次时间戳</p>
-
-
 </body>
 
-
-<head>
-<html>
+</head>
+</html>

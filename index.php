@@ -22,7 +22,7 @@ echo "<br>";
 echo "请把他记下来，待会有用";
 ?>
 
-<form name="start" action="CabinetClock.php"><br>
+<form name="start" action="inbox.php"><br>
 <input type="submit" name="start">
 </form>
 
