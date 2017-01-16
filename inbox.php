@@ -1,6 +1,3 @@
-<?php
-include("start.php")
-?>
 
 <?php
 #会议开始时间
@@ -15,10 +12,10 @@ include("start.php")
 #$timexxx=0; //时间换算比
 
 #以下代码为计算公式
-$timexs = $time1s-$starttime;
-$timexmun = $timexxx * $timexs;
-$time1m=$starttime+$timexmun;
- $time1m;
+#$timexs = $time1s-$starttime;
+#$timexmun = $timexxx * $timexs;
+#$time1m=$starttime+$timexmun;
+#$time1m;
 ?>
 
 <?php
@@ -26,9 +23,5 @@ include("CabinetClock.php")
 ?>
 
 <?php
-include("stop.php")
-?>
-
-<?php
-include("stopmeeting.php")
+include("info.php")
 ?>

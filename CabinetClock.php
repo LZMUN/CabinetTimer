@@ -2,7 +2,8 @@
 <head>
 
 
-
+<p>内阁时钟显示器</p>
+<p>！！会议过程中请不要关闭本窗口！！</p>
 <form name=tett>
 <input type=text name=timexxx value="time" size=10>
 <input type=text name=start value="time2" size=10>
@@ -42,3 +43,7 @@ t=setTimeout("timedCount()",1000) //每1秒计算1次 1000毫秒为1秒
 
 
 </body>
+
+
+<head>
+<html>
