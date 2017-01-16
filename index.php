@@ -16,15 +16,15 @@ echo "<br>";
 include("clock.php")
 ?>
 
-<form name="gettime" method="post"><br>
-<input type="submit" name="get">
-if($_POST["submit"="get"]){
-    
-}
+<?php
+echo "当前时间戳为：".mktime()."<p>";
+echo "<br>";
+echo "请把他记下来，待会有用";
+?>
 
-<form name="start" action="inbox.php"><br>
+<form name="start" action="CabinetClock.php"><br>
 <input type="submit" name="start">
-
+</form>
 
 <?php
 include("info.php")
