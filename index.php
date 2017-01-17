@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>CabinetTimer></title>
+<title>CabinetTimer</title>
 </head>
 
 <body>
