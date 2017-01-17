@@ -16,13 +16,7 @@ echo "<br>";
 ?>
 
 <?php
-include("clock.php")
-?>
-
-<?php
-echo "当前时间戳为：".mktime()."<p>";
-echo "<br>";
-echo "请把他记下来，待会有用";
+include("getjstime.php")
 ?>
 
 <form name="start" action="inbox.php"><br>
