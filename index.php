@@ -15,6 +15,13 @@ echo "<br>";
 echo "<br>";
 ?>
 
+<!-- 展示13位JS样式时间戳 -->
+<script type="text/javascript">
+    var d=new Date();
+    document.write("当前时间戳（13位）:  " + d.getTime());
+    document.write("  把他记下来")
+</script>
+
 <?php
 include("getjstime.php")
 ?>

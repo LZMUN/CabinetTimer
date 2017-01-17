@@ -2,7 +2,7 @@
 <head>
 
 <?php
-include("CabinetClock.php")
+include("Html.CabinetClock.with.amazeUI.html")
 ?>
 
 <?php

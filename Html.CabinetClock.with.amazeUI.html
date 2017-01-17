@@ -7,7 +7,13 @@
   <meta name="keywords" content="">
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
-  <title>Hello Amaze UI</title>
+  <title>CabinetTimer</title>
+
+  <!-- 使用微软提供CDN的jq -->
+  <head>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+  </script>
+  </head>
 
   <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
@@ -33,13 +39,15 @@
 
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
   <link rel="stylesheet" href="assets/css/app.css">
+
+  <script src="color.min.js"></script>
+  <link rel="stylesheet" href="color.min.css">
 </head>
+
 <body>
-
 <!-- 写代码的地方 -->
-
-<!-- 初始提示 -->
-<div class="am-alert am-alert-warning" data-am-alert>
+<!-- 顶部提示 -->
+<div class="am-alert am-alert-primary" data-am-alert>
   <h3>CabinetTimer</h3>
   <p>Test</p>
   <ul>
@@ -52,7 +60,6 @@
 
 <html>
 <head>
-
 <!-- 展示13位JS样式时间戳 -->
 <script type="text/javascript">
     var d=new Date();
@@ -60,30 +67,47 @@
     document.write("  把他记下来")
 </script>
 
-<!-- 输入时间参数 -->
+<script type="text/javascript">
+    function setdata()
+    {
+    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
+    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
+    }
+</script>
+
+<div class="am-input-group">
+    <div class="color-form-group color-form-line">
+    <input name=timeratio class="color-form-control" placeholder="timeratio" type="text">
+    <label class="color-form-control-label">输入时间转换比</label>
+    <span class="color-form-control-help">每秒等于多少秒</span>
+</div>
+
+<div class="am-input-group">
+    <div class="color-form-group color-form-line">
+    <input name=starttimex class="color-form-control" placeholder="starttimex" type="text">
+    <label class="color-form-control-label">输入开始时间戳</label>
+    <span class="color-form-control-help">13位精确到毫秒</span>
+</div>
+
+<button class="am-btn am-btn-default" type="button" onclick="setdata">设定</button>
+
+<script language=javascript>
+    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
+    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
+</script>
 <!--
-<form name=basic class="am-form" method="POST">
-    <legend>输入基本数值</legend>
+<form name=basic class="am-form">
     <div class="am-form-group">
-        <label for="timeratio">时间转换比</label>
-        <input type=text name=timeratio value="ratio" class="am-btn am-btn-primary am-form-field am-round" size=15>
+        <label for="ratio">时间转换比</label>
+        <input type=text name=timeratiox value="ratio" size=15>
         <label for="starttime">初始时间戳</label>
-        <input type=text name=starttime value="start" class="am-btn am-btn-primary am-form-field am-round" size=15>
-        <input type="button" value="设定数值" class="am-btn am-btn-primary" onClick="setdata()" size=15>
+        <input type=text name=starttimex value="starttime" size=15>
         </div>
 </form>
 -->
 
-<form name=basic class="am-form">
-    <div class="am-form-group">
-        <label for="ratio">时间转换比</label>
-        <input type=text name=timeratiox value="ratio" class="am-btn am-btn-primary am-form-field am-round" size=15>
-        <label for="starttime">初始时间戳</label>
-        <input type=text name=starttimex value="starttime" class="am-btn am-btn-primary am-form-field am-round" size=15>
-        </div>
-</form>
-
 <!-- 弹框输入时间参数 -->
+<!--
 <script language=javascript>
     var timeratio = prompt(" 输入时间转换比 "); //弹框输入转换比
     var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
@@ -92,8 +116,7 @@
     var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
     document.basic.starttimex.value = starttimex; //将初始时间戳显示在输入框中
 </script>
-
-
+-->
 
 <!-- 获取basic表单输入的参数 -->
 <!--
@@ -102,6 +125,7 @@
     var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
 </script>
 -->
+
 <!--
 <script type="text/javascript">
     function setdata()
@@ -112,8 +136,8 @@
 </script>
 -->
 
-
 <!-- 对时间参数进行计算 -->
+<!--
 <script type="text/javascript">
     var c=starttimex
     var t
@@ -125,35 +149,79 @@
     t=setTimeout("timedCount()",1000) //每1秒计算1次 1000毫秒为1秒
     }
 </script>
+-->
+
+<script type="text/javascript">
+    function timedCount()
+    {
+    document.getElementById('meetingtime').value=c
+    timeratioc=timeratiox*1000 //js时间戳精确到毫秒
+    c=c+timeratioc
+    t=setTimeout("timed2Count()",1000) //每1秒计算1次 1000毫秒为1秒
+    }
+</script>
+        
 
 </head>
 
-<body>
-<form class="am-form">
-    <input type="button" value="会议开始" class="am-btn am-btn-primary " onClick="timedCount()" size=15>
-    <input type="text" id="meetingtime" size=15>
+
+<head>
+<script type="text/javascript">
+var c=0
+var t
+function timed2Count()
+{
+document.getElementById('meetingtime').value=c
+c=c+1
+t=setTimeout("timed2Count()",1000)
+}
+</script>
+</head>
+
+<form>
+<input type="button" value="开始计时！" onClick="timed2Count()" class="am-btn am-btn-primary" >
 </form>
 
-<p>   </p>
-<p>   </p>
+<p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p>
 
-<!--
-<form class="am-form">
 
-    <legend>输出区域</legend>
 
-    <div class="am-form-group">
-      <label for="doc-ipt-email-1">内阁时间戳</label>
-      <input type="text" class="" id="meetingtime" placeholder="内阁时间戳">
-    </div>
-</form>
--->
-
-<p>请点击上面的按钮。输入框会从 0 开始一直进行计时</p>
-<p>只能点一次！！！</p>
-<p>会议结束前，请重新记一次时间戳</p>
-
+</html>
 </body>
+
+
+
+
+
+
+
+
+
+
+<button type="button" class="am-btn am-radius color-modal-btn-blue" data-am-modal="{target: '#doc-modal-1'}">
+    ABOUT
+</button>
+ 
+ 
+<div class="am-modal am-modal-no-btn color-modal-style color-modal-style-blue" tabindex="-1" id="doc-modal-1">
+    <div class="am-modal-dialog">
+        <div class="color-modal-style-head am-text-middle">
+            <span class="color-modal-style-head-title ">
+                信息
+            </span>
+        </div>
+        <div class="am-modal-hd">CabinetTimer
+            <a href="javascript: void(0)" class="am-close am-close-spin  color-modal-style-close" data-am-modal-close>×</a>
+        </div>
+        <div class="am-modal-bd">
+            渊文模联技术部 试制
+             
+        </div>
+        <div class="color-modal-style-btn">
+            <button type="button" class="am-btn am-radius" data-am-modal-close>确认</button>
+        </div>
+         
+    </di
 
 </head>
 </html>
