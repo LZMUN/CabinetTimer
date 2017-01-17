@@ -2,7 +2,7 @@
 <head>
 
 <head>
-    <title>CabinetTimer></title>
+    <title>CabinetTimer</title>
     <p>内阁时钟显示器</p>
     <p>！！会议过程中请不要关闭本窗口！！</p>
 </head>
