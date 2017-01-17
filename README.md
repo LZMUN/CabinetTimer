@@ -13,7 +13,9 @@
 
 需要什么条件
 ----
-CabinetTimer通过PHP写成，这意味着你需要一台可以解析PHP的服务器，以及一台可以联网的电脑。或者一台带有Apache2的电脑。
+<del>CabinetTimer通过PHP写成，这意味着你需要一台可以解析PHP的服务器，以及一台可以联网的电脑。或者一台带有Apache2的电脑。</del>
+
+现在，CabinetTimer开始转换为由HTML和JS写成，你可以在HTML分支下下载HTML.CabinetTimer.html,并且直接通过浏览器打开他！
 
 如果你使用Windows，你可以通过安装XAMPP来获得解析PHP的能力。
 如果你使用Linux，你可以通过安装Apache2来获得解析PHP的能力。
