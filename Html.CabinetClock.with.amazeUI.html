@@ -35,33 +35,34 @@
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
-<p>
-  Hello Amaze UI.
-</p>
 
 <!-- 写代码的地方 -->
+
+<!-- 初始提示 -->
+<div class="am-alert am-alert-warning" data-am-alert>
+  <h3>CabinetTimer</h3>
+  <p>Test</p>
+  <ul>
+    <li>使用过程中不要关闭本窗口！</li>
+    <li>会议开始按钮只能点击一次</li>
+    <li>会议结束前请记下结束时的时间戳（最后3位数可以随便填==）</li>
+  </ul>
+</div>
 
 <html>
 <head>
 
-<!-- 初始提示 -->
-<head>
-    <title>CabinetTimer</title>
-    <h1>CabinetTimer</h1>
-    <p>！！会议过程中请不要关闭本窗口！！</p>
-</head>
-
-<!-- 首先展示13位JS样式时间戳 -->
+<!-- 展示13位JS样式时间戳 -->
 <script type="text/javascript">
     var d=new Date();
     document.write("当前时间戳（13位）:  " + d.getTime());
-    document.write("  把他记下来，待会有用")
+    document.write("  把他记下来")
 </script>
 
 <!-- 显示时间参数 -->
 <form name=basic>
-    <input type=text name=timeratiox value="ratio" size=5>
-    <input type=text name=starttimex value="start" size=15>
+    <input type=text name=timeratiox value="ratio" class="am-btn am-btn-primary" size=15>
+    <input type=text name=starttimex value="start" class="am-btn am-btn-primary" size=15>
 </form>
 
 <script language=javascript>
@@ -86,31 +87,31 @@
     }
 </script>
 
-<button type="button" class="am-btn am-btn-primary">为什么不在这里放一个并没有什么x用的按钮呢</button>
-
 </head>
 
 <body>
 <form>
-    <input type="button" value="开会啦！！" onClick="timedCount()" size=10>
-    <input type="text" id="meetingtime" size=20>
+    <input type="button" value="开会啦！！" class="am-btn am-btn-primary" onClick="timedCount()" size=10>
+    <input type="text" id="meetingtime" class="am-btn am-btn-primary" size=20>
+</form>
+
+<p>   </p>
+<p>   </p>
+
+<form class="am-form">
+
+    <legend>输出区域</legend>
+
+    <div class="am-form-group">
+      <label for="doc-ipt-email-1">内阁时间戳</label>
+      <input type="text" class="" id="meetingtime" placeholder="内阁时间戳">
+    </div>
 </form>
 
 <p>请点击上面的按钮。输入框会从 0 开始一直进行计时</p>
 <p>只能点一次！！！</p>
 <p>会议结束前，请重新记一次时间戳</p>
-</body>
 
-<script language=javascript> //时间戳转换为时间
-    var meetingtimex = meetingtime
-    commonTime = meetingtimex.toLocaleString()
-    document.getElementById('meetingtimex').value=c
-</script>
-
-<body>
-    <form>
-    <input type="text" id="meetingtime">
-    </form>
 </body>
 
 </head>
