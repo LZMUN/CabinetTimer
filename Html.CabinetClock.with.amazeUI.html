@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
@@ -67,135 +68,111 @@
     document.write("  把他记下来")
 </script>
 
-<script type="text/javascript">
-    function setdata()
-    {
-    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
-    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
-    }
-</script>
+<head>  
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>  
 
-<div class="am-input-group">
-    <div class="color-form-group color-form-line">
-    <input name=timeratio class="color-form-control" placeholder="timeratio" type="text">
-    <label class="color-form-control-label">输入时间转换比</label>
-    <span class="color-form-control-help">每秒等于多少秒</span>
-</div>
 
-<div class="am-input-group">
-    <div class="color-form-group color-form-line">
-    <input name=starttimex class="color-form-control" placeholder="starttimex" type="text">
-    <label class="color-form-control-label">输入开始时间戳</label>
-    <span class="color-form-control-help">13位精确到毫秒</span>
-</div>
-
-<button class="am-btn am-btn-default" type="button" onclick="setdata">设定</button>
-
-<script language=javascript>
-    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
-    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
-</script>
-<!--
-<form name=basic class="am-form">
-    <div class="am-form-group">
-        <label for="ratio">时间转换比</label>
-        <input type=text name=timeratiox value="ratio" size=15>
-        <label for="starttime">初始时间戳</label>
-        <input type=text name=starttimex value="starttime" size=15>
-        </div>
-</form>
--->
-
-<!-- 弹框输入时间参数 -->
-<!--
-<script language=javascript>
-    var timeratio = prompt(" 输入时间转换比 "); //弹框输入转换比
-    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
-    document.basic.timeratiox.value = timeratiox; //将转换比显示在输入框中
-    var starttime = prompt(" 输入开始的时间戳（刚才你记下来的） "); //弹框输入初始时间戳
-    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
-    document.basic.starttimex.value = starttimex; //将初始时间戳显示在输入框中
-</script>
--->
-
-<!-- 获取basic表单输入的参数 -->
-<!--
-<script language=javascript>
-    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
-    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
-</script>
--->
-
-<!--
-<script type="text/javascript">
-    function setdata()
-    {
-    var c=starttimex
-    var t
-    }
-</script>
--->
-
-<!-- 对时间参数进行计算 -->
-<!--
-<script type="text/javascript">
-    var c=starttimex
-    var t
-    function timedCount()
-    {
-    document.getElementById('meetingtime').value=c
-    timeratioc=timeratiox*1000 //js时间戳精确到毫秒
-    c=c+timeratioc
-    t=setTimeout("timedCount()",1000) //每1秒计算1次 1000毫秒为1秒
-    }
-</script>
--->
-
-<script type="text/javascript">
-    function timedCount()
-    {
-    document.getElementById('meetingtime').value=c
-    timeratioc=timeratiox*1000 //js时间戳精确到毫秒
-    c=c+timeratioc
-    t=setTimeout("timed2Count()",1000) //每1秒计算1次 1000毫秒为1秒
-    }
-</script>
-        
-
+ <head>
+    <script type="text/javascript">
+    // Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+        function OnInput (event) {
+            alert ("The new content: " + event.target.value);
+        }
+    // Internet Explorer
+        function OnPropChanged (event) {
+            if (event.propertyName.toLowerCase () == "value") {
+                alert ("The new content: " + event.srcElement.value);
+            }
+        }
+    </script>
 </head>
+<body>
+    Please modify the contents of the text field.
+    <input type="text" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)"
+     value="Text field" />
+</body>
 
+    <head>
+            <script type="text/javascript">
+            function OnInput (ratio) {
+            var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
+            }
+             
+            </script>
+    </head>
 
-<head>
-<script type="text/javascript">
-var c=0
-var t
-function timed2Count()
-{
-document.getElementById('meetingtime').value=c
-c=c+1
-t=setTimeout("timed2Count()",1000)
-}
-</script>
+    <body>
+    <div class="am-input-group">
+    <div class="color-form-group color-form-line">     
+    <input type="text" oninput="OnInput (ratio)" id="timeratio" name="timeratio" placeholder="Input Timeratio" class="color-form-control">
+    <input type="text" oninput="OnInput (start)" id="starttime" name="starttime" placeholder="Input Starttime" class="color-form-control">  
+    </div>  
+    <button type="buttonset" id="settime" class="am-btn am-btn-default">设定</button>  
+    </div>
+    </body> 
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+    $("#settime").click(function(){
+    $("#settime").bind('input propertychange', function () {
+    var timeratio = ($("input[name=timeratio]").val());  
+    var starttime = ($("input[name=starttime]").val()); 
+    var timeratiox = parseInt(timeratio); //将输入的转换比转化为数值
+    var starttimex = parseInt(starttime); //将输入的初始时间戳转化为数值
+            });
+        });
+    });
+    var c = parseInt(starttime)
+    var t
+    function timedCount()
+    {
+    document.getElementById('txt').value=c
+    c=c+parseInt(timeratio)
+    t=setTimeout("timedCount()",1000)
+    }
+    </script>
 </head>
 
 <form>
-<input type="button" value="开始计时！" onClick="timed2Count()" class="am-btn am-btn-primary" >
+<input type="button" value="开始" onClick="timedCount()">
+<input type="text" id="txt">
 </form>
 
 <p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p>
 
-
-
-</html>
 </body>
 
 
-
-
-
-
-
-
+<ul class="color-timeline">
+    <li class="color-timeline-item">
+        <div class="color-timeline-item-tail"></div>
+        <div class="color-timeline-item-head color-timeline-item-head-blue"></div>
+        <div class="color-timeline-item-content">233</div>
+    </li>
+    <li class="color-timeline-item">
+        <div class="color-timeline-item-tail"></div>
+        <div class="color-timeline-item-head color-timeline-item-head-blue"></div>
+        <div class="color-timeline-item-content">2333</div>
+    </li>
+    <li class="color-timeline-item">
+        <div class="color-timeline-item-tail"></div>
+        <div class="color-timeline-item-head color-timeline-item-head-blue"></div>
+        <div class="color-timeline-item-content">23333</div>
+    </li>
+    <li class="color-timeline-item">
+        <div class="color-timeline-item-tail"></div>
+        <div class="color-timeline-item-head color-timeline-item-head-blue"></div>
+        <div class="color-timeline-item-content">233333</div>
+    </li>
+    <li class="color-timeline-item color-timeline-item-last">
+        <div class="color-timeline-item-tail"></div>
+        <div class="color-timeline-item-head color-timeline-item-head-blue"></div>
+        <div class="color-timeline-item-content">2333333</div>
+    </li>
+</ul>
 
 
 <button type="button" class="am-btn am-radius color-modal-btn-blue" data-am-modal="{target: '#doc-modal-1'}">
@@ -224,7 +201,12 @@ t=setTimeout("timed2Count()",1000)
     </di
 
 </head>
+
+
+
 </html>
+
+
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
