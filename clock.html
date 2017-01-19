@@ -85,16 +85,20 @@
             </div>
             </div>
         </body>
-    
-<body>        
-    <form name=basic>
-        <div class="mdl-textfield mdl-js-textfield">
-        <input type=text id=ratio name=timeratiox value="Ratio">
-        <label class="mdl-textfield__label" for="ratio">Ratio...</label>
-        <input type=text id=start name=starttimex value="Start">
-        <label class="mdl-textfield__label" for="start">Starttime...</label>
-        </div>
-    </form>
+
+
+    <!-- Simple Textfield -->
+        <form name=basic action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input type=text class="mdl-textfield__input" name=timeratiox id="timeratiox">
+                <label class="mdl-textfield__label" for="timeratiox">Timeratiox...</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input type=text class="mdl-textfield__input" name=starttimex id="starttimex">
+                <label class="mdl-textfield__label" for="starttimex">Starttimex...</label>
+            </div>
+            </form>
+
 
     <script language=javascript>
         var timeratio = prompt(" 输入时间转换比 "); //获取输入的转换比
@@ -117,10 +121,15 @@
         }
     </script>
 
-    <form>
-        <input type="button" value="开始计时" onClick="timedCount()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-        <input type="text" id="meetingtime" size=20>
+
+    <form name=basic action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input type=text class="mdl-textfield__input" name=meetingtime id="meetingtime">
+            <label class="mdl-textfield__label" for="starttimex"></label>
+        </div>
     </form>
+    <button type="button" value="开始计时" onClick="timedCount()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">开始计时</button>
+
 
 <br>
 <br>
