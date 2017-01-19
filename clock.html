@@ -6,6 +6,12 @@
     <script defer src="clientSideInclude.js"></script>
 </head>
 
+<br>
+<br>
+<br>
+<br>
+
+
 <body>
     <!--右下角 Github 按钮-->
     <style>
@@ -36,11 +42,6 @@
 </body>
 
 
-<!-- Contact Chip -->
-<span class="mdl-chip mdl-chip--contact">
-    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">i</span>
-    <span class="mdl-chip__text">会议过程中不要关闭窗口</span>
-</span>
 
 <br>
 <br>
@@ -50,15 +51,49 @@
 		div{width:778px;margin:0 auto;background:#fff;text-align:left;}
 	</style>
 
-<body>
-    <script type="text/javascript">
-        var d=new Date();
-        document.write("当前时间戳（13位）:  " + d.getTime());
-    </script>
-
+    <!-- CabineteTimer卡片 -->
+    <body>
+        <style>
+            .demo-card-wide.mdl-card {
+                width: 512px;
+            }
+            .demo-card-wide > .mdl-card__title {
+                color: #fff;
+                height: 176px;
+                background: url('http://p1.bqimg.com/567571/958def0057cf2f62.jpg') center / cover;
+            }
+            .demo-card-wide > .mdl-card__menu {
+                color: #fff;
+            }
+        </style>
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">CabinetTimer</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <script type="text/javascript">
+                var d=new Date();
+                var c
+                document.write("当前时间戳（13位）:  " + d.getTime());
+                c=d.getTime()
+        </script>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a  onclick="window.location.href='clock.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Into
+                </a>
+            </div>
+            </div>
+        </body>
+    
+<body>        
     <form name=basic>
-        <input type=text name=timeratiox value="ratio" size=5>
-        <input type=text name=starttimex value="start" size=15>
+        <div class="mdl-textfield mdl-js-textfield">
+        <input type=text id=ratio name=timeratiox value="Ratio">
+        <label class="mdl-textfield__label" for="ratio">Ratio...</label>
+        <input type=text id=start name=starttimex value="Start">
+        <label class="mdl-textfield__label" for="start">Starttime...</label>
+        </div>
     </form>
 
     <script language=javascript>
@@ -93,23 +128,28 @@
 
 <!-- Contact Chip -->
 <span class="mdl-chip mdl-chip--contact">
-    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">a</span>
+    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">1</span>
+    <span class="mdl-chip__text">会议过程中不要关闭窗口</span>
+</span>
+<br>
+
+<!-- Contact Chip -->
+<span class="mdl-chip mdl-chip--contact">
+    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">2</span>
     <span class="mdl-chip__text">点击按钮开始进行计时</span>
 </span>
-
 <br>
 
 <!-- Contact Chip -->
 <span class="mdl-chip mdl-chip--contact">
-    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">b</span>
+    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">3</span>
     <span class="mdl-chip__text">注意按钮只能点击一次</span>
 </span>
-
 <br>
 
 <!-- Contact Chip -->
 <span class="mdl-chip mdl-chip--contact">
-    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">c</span>
+    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
     <span class="mdl-chip__text">会议结束请再次记时间</span>
 </span>
 
