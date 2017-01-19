@@ -5,10 +5,17 @@
 <link rel="stylesheet" href="styles.css">
 </html>
 
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+
+
     <style type="text/css">
 		body{background:#fff;text-align:center;}
 		div{width:778px;margin:0 auto;background:#fff;text-align:left;}
 	</style>
+
+    <script src="dist/clipboard.min.js"></script>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -36,6 +43,19 @@
         }
     </style>
         <a href="https://github.com/Stark2Chen/CabinetTimer" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Github</a>
+    <!--右下角 BLOG 按钮-->
+    <style>
+         #into-blog {
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 80px;
+        z-index: 900;
+        }
+    </style>
+        <a href="http://www.ix-4x.cc" target="_blank" id="into-blog" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">BLOG</a>
 
     <!-- CabineteTimer卡片 -->
     <body>
@@ -73,11 +93,17 @@
 <br>
 <br>
 
+
+
     <script type="text/javascript">
         var d=new Date();
+        var c
         document.write("当前时间戳（13位）:  " + d.getTime());
+        c=d.getTime()
         document.write("  把他记下来，待会有用")
     </script>
+
+
 
 <br>
 <br>
@@ -102,6 +128,71 @@
 <br>
 <br>
 <br>
+
+    <!-- CabineteTimer卡片 -->
+    <body>
+        <style>
+            .demo-card-wide.mdl-card {
+                width: 512px;
+            }
+            .demo-card-wide > .mdl-card__title {
+                color: #fff;
+                height: 176px;
+                background: url('http://p1.bqimg.com/567571/958def0057cf2f62.jpg') center / cover;
+            }
+            .demo-card-wide > .mdl-card__menu {
+                color: #fff;
+            }
+        </style>
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">CabinetTimer</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a  onclick="window.location.href='Html.CabinetClock.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Into
+                </a>
+            </div>
+            </div>
+            </div>
+        </body>
+
+
+    <!-- CabineteTimer卡片 -->
+    <body>
+        <style>
+            .demo-card-wide.mdl-card {
+                width: 512px;
+            }
+            .demo-card-wide > .mdl-card__title {
+                color: #fff;
+                height: 176px;
+                background: url('http://p1.bqimg.com/567571/958def0057cf2f62.jpg') center / cover;
+            }
+            .demo-card-wide > .mdl-card__menu {
+                color: #fff;
+            }
+        </style>
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">CabinetTimer</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a  onclick="window.location.href=http://www.ix-4x.cc" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Into
+                </a>
+            </div>
+            </div>
+            </div>
+        </body>
 
     
 
