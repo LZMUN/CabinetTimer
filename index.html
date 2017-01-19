@@ -5,29 +5,24 @@
 <link rel="stylesheet" href="styles.css">
 </html>
 
-<!-- Simple header with fixed tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
-    </div>
-    <!-- Tabs -->
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
-    </div>
-    </header>
-        <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
-        </div>
-        <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-        <div class="page-content">
-        <div>
-<!--Github 按钮-->
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- 浏览器图标 -->
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!--右下角 Github 按钮-->
     <style>
          #view-source {
         position: fixed;
@@ -41,42 +36,46 @@
     </style>
         <a href="https://github.com/Stark2Chen/CabinetTimer" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Github</a>
 
-
-
-    <!-- Wide card with share menu button -->
-    <style>
-        .demo-card-wide.mdl-card {
-            width: 512px;
-        }
-        .demo-card-wide > .mdl-card__title {
-            color: #fff;
-            height: 176px;
-            background: url('../images/index_welcome_card.jpg') center / cover;
-        }
-        .demo-card-wide > .mdl-card__menu {
-            color: #fff;
-        }
-    </style>
-        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <!--居中-->
+    <head> 
+        <style type="text/css"><!--body {margin:0 auto;width:512px;}</style> 
+    </head> 
+    <!-- CabineteTimer卡片 -->
+    <div>
+        <style>
+            .demo-card-wide.mdl-card {
+                width: 512px;
+            }
+            .demo-card-wide > .mdl-card__title {
+                color: #fff;
+                height: 176px;
+                background: url('../images/index_welcome_card.jpg') center / cover;
+            }
+            .demo-card-wide > .mdl-card__menu {
+                color: #fff;
+            }
+        </style>
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Welcome</h2>
+                <h2 class="mdl-card__title-text">CabinetTimer</h2>
             </div>
-        <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
+            <div class="mdl-card__supporting-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris sagittis pellentesque lacus eleifend lacinia...
             </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a  onclick="window.location.href='Html.CabinetClock.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Have a try!
-            </a>
+            <div class="mdl-card__actions mdl-card--border">
+                <a  onclick="window.location.href='Html.CabinetClock.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Into
+                </a>
+            </div>
+            <div class="mdl-card__menu">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                </button>
+            </div>
+            </div>
+            </div>
         </div>
-        <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-            <i class="material-icons">share</i>
-        </button>
-        </div>
-        </div>
-    </div>
 
 <br>
 <br>
@@ -109,20 +108,6 @@
         this.MaterialProgress.setBuffer(87);
         });
         </script>
-
-<br>
-<br>
-<br>
-          </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-  </main>
-</div>
 
 <br>
 <br>
